@@ -32,6 +32,10 @@
                 case 'clientCount':
                     clientCount = msg.data.clientCount;
                     break;
+                case 'reset':
+                    error = null;
+                    buzzList = [];
+                    break;
                 case 'error':
                     error = msg.message || 'Server error';
                     console.error(msg);

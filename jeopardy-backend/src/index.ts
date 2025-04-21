@@ -106,9 +106,7 @@ const handlers: Record<string, (packet: Packet, socket: WebSocket.WebSocket) => 
 
     'reset': () => {
         buzzEvents.length = 0;
-        for (const { player, socket } of players.values()) {
-            if (!player.isHost) send(socket, 'reset', {});
-        }
+        broadcastToHosts('reset', {});
         logger.global.info('Game reset!');
     },
 
