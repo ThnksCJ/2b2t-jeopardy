@@ -1,9 +1,8 @@
 {
   "name": "jeopardy-backend",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
-    "start": "npm run prestart && node dist/index.js",
-    "prestart": "tsc",
+    "build": "tsc",
     "dev": "ts-node src/index.ts"
   },
   "devDependencies": {

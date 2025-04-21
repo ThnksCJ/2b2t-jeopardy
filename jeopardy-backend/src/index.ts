@@ -173,6 +173,6 @@ const handlers: Record<string, (packet: Packet, socket: WebSocket.WebSocket) => 
     fastify.get('/', async () => ['Jeopardy Backend', { github: '/thnkscj', made: 'with ❤️ by ceejay' }]);
     fastify.get('/health', async () => ({ status: 'ok' }));
 
-    await fastify.listen({ port: 25503, host: '0.0.0.0' });
-    logger.global.info(`Server is running at http://localhost:25503`);
+    const host = await fastify.listen({ port: 25503, host: '0.0.0.0' });
+    logger.global.info(`Server listening on ${host}`);
 })();

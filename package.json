@@ -1,0 +1,13 @@
+{
+  "name": "jeopardy-monorepo",
+  "version": "1.0.0",
+  "scripts": {
+    "install-all": "npm install --prefix jeopardy-backend && npm install --prefix jeopardy-frontend",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "cd jeopardy-backend && npm run build",
+    "build:frontend": "cd jeopardy-frontend && npm run build",
+    "dev": "npm run dev:backend && npm run dev:frontend",
+    "dev:backend": "cd jeopardy-backend && npm run dev",
+    "dev:frontend": "cd jeopardy-frontend && npm run dev"
+  }
+}
